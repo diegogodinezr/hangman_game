@@ -1,5 +1,4 @@
-/* main.css */
-
+/* Estilos específicos para Welcome */
 .wrapper {
     text-align: center;
     margin-top: 50px;
@@ -19,26 +18,72 @@ h2 {
     margin-bottom: 30px;
 }
 
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 img {
     width: 200px;
     height: 200px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 }
-
-/* Estilos adicionales */
-body {
-    background-color: #f7f7f7;
-    font-family: 'Arial', sans-serif;
+/* Estilos específicos para Hangman */
+.hangman-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin-top: 100px; /* Ajusta este valor según tu preferencia para mover el área de juego más arriba */
+    margin-bottom: 50px; /* Agrega un margen inferior para separar el área de juego del resto del contenido */
 }
 
-.wrapper {
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
+.hangman-word {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hangman-input {
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.hangman-button {
+    background-color: #007bff;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos para la animación cuando se hace clic en el botón */
+.hangman-button:active {
+    transform: scale(1.1);
+}
+
+.hangman-message {
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 10px;
 }
