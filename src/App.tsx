@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Hangman from './components/Hangman';
 import Welcome from './components/Welcome';
 
+
 const App: React.FC = () => {
   const [gameStarted, setGameStarted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -19,8 +20,7 @@ const App: React.FC = () => {
     const randomCategory = categories[Math.floor(Math.random() * categories.length)];
     setSelectedCategory(randomCategory);
     setSelectedCategoryWords(wordCategories[randomCategory]);
-    setGameStarted(true);
-  }, []); // Se ejecutará solo una vez al cargar el componente
+  }, []);
 
   const startGame = (category: string) => {
     setSelectedCategory(category);
@@ -34,7 +34,7 @@ const App: React.FC = () => {
         <Welcome category={selectedCategory} startGame={startGame} />
       </div>
       {gameStarted && (
-        <Hangman 
+        <Hangman
           tecnologia={selectedCategoryWords[0]}
           profesiones={selectedCategoryWords[1]}
           paises={selectedCategoryWords[2]}
@@ -43,6 +43,6 @@ const App: React.FC = () => {
       )}
     </div>
   );
-}
+};
 
 export default App;

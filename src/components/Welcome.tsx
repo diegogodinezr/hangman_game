@@ -23,15 +23,15 @@ const Welcome: React.FC<WelcomeProps> = ({ category, startGame }) => {
   };
 
   return (
-    <>
-      <div className="wrapper">
+    <div className="welcome">
+      <div className="welcome-content">
         <h1>Welcome to Hangman game</h1>
         <h2>Classical Game</h2>
         <p>{getCategoryHint(category)}</p>
+        <img src={hangman} alt="hangman" />
         <button onClick={() => startGame(category)}>Play</button>
-        <img src={hangman} alt='hangman' width={200} height={200}/>
       </div>
-    </>
+    </div>
   );
 };
 
