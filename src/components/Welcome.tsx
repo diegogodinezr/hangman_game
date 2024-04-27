@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import hangman from '../img/hangman.png';
 import '../css/main.css';
@@ -40,7 +41,16 @@ const Welcome: React.FC<WelcomeProps> = ({ category, startGame }) => {
         <h2>Classical Game</h2>
         <p>{getCategoryHint(category)}</p>
         <img src={hangman} alt="hangman" />
-        <p>Tiempo transcurrido: {count} segundos</p> {/* Mostrar el tiempo */}
+        <p>Elapsed time: {count} seconds</p> {/* Mostrar el tiempo */}
+        <h2>Game Stats</h2> {/* Nuevo título en inglés */}
+        <nav>
+          <ul>
+            <li>
+              <Link to="stats">Stats</Link>
+            </li>
+          </ul>
+        </nav>
+        <br />
         <button onClick={() => startGame(category)}>Play</button>
       </div>
     </div>
