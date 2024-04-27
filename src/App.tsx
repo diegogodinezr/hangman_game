@@ -8,6 +8,8 @@ const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCategoryWords, setSelectedCategoryWords] = useState<string[]>([]);
 
+  
+
   const wordCategories = {
     tecnologia: ['javascript', 'react', 'nodejs', 'express', 'mongodb', 'python', 'django', 'flask', 'java', 'spring', 'hibernate', 'mysql', 'postgresql', 'sql', 'html', 'css', 'sass', 'less'],
     profesiones: ['doctor', 'ingeniero', 'arquitecto', 'programador', 'diseñador', 'maestro', 'enfermero', 'abogado', 'cientifico'],
