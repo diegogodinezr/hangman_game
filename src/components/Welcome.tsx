@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom'
+// Welcome.tsx
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import hangman from '../img/hangman.png';
 import '../css/main.css';
+import { WordCategories } from '../App.tsx'; // Importar la interfaz de App
 
 interface WelcomeProps {
-  category: string;
-  startGame: (category: string) => void;
+  category: keyof WordCategories;
+  startGame: (category: keyof WordCategories) => void;
 }
 
 const Welcome: React.FC<WelcomeProps> = ({ category, startGame }) => {
   const [count, setCount] = useState(0); // Estado para el temporizador
 
-  const getCategoryHint = (category: string) => {
+  const getCategoryHint = (category: keyof WordCategories) => {
     switch (category) {
       case 'tecnologia':
         return 'Pista: Esta categoría incluye palabras relacionadas con la informática y la tecnología.';
