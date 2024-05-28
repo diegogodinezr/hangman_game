@@ -21,7 +21,7 @@ const Hangman: React.FC<HangmanProps> = ({
   const [inputValue, setInputValue] = useState("");
   const { incrementWinCount, incrementLoseCount } = useContext(StatsContext); // Obtener las funciones del contexto
 
-  const displayWord = selectedWord.split("").map((letter, index) => {
+  const displayWord = selectedWord.split("").map((letter) => {
     if (guessedLetters.includes(letter)) {
       return letter;
     } else {
